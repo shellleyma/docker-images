@@ -1,0 +1,17 @@
+Jinja2==2.7.3
+pyenchant==1.6.5
+pymongo==2.8
+tornado==3.2.2
+motor==0.4
+python-Levenshtein==0.11.2
+simhash>=1.4.6
+Pillow
+beautifulsoup4
+jieba
+whoosh
+httpagentparser
+numpy
+scipy
+matplotlib
+xhtml2pdf
+requests
