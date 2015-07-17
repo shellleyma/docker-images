@@ -11,7 +11,7 @@ RUN wget ftp://ftp.fr.netbsd.org/pub/pkgsrc/distfiles/CRF++-${CRFPP_VERSION}.tar
         && make install \
         && ldconfig \
         && cd python \
-        && python setup.py install
+        && python setup.py install \
         && rm -rf /usr/src/crfpp
 
 WORKDIR /usr/src
