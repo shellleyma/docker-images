@@ -13,7 +13,10 @@ RUN apt-get update && apt-get install -y \
 COPY pip_req.txt /usr/src/
 RUN pip install -r /usr/src/pip_req.txt
 
-RUN apt-get remove gfortran && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache
+RUN apt-get remove -y gfortran \
+        && apt-get autoremove -y \
+        && apt-get clean \
+        && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
