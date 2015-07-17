@@ -1,5 +1,4 @@
 FROM wilburding/py_boost
-MAINTAINER wilbur "wilbur@kuailexue.com"
 
 RUN apt-get update && apt-get install -y \
 	libenchant-dev \

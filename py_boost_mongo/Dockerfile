@@ -1,6 +1,5 @@
 # py_boost_mongo
 FROM wilburding/py_boost
-MAINTAINER wilbur "wilbur@kuailexue.com"
 
 ENV MONGO_CXX_DRIVER_VERSION 1.0.2
 

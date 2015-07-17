@@ -1,6 +1,6 @@
 # py_boost
 FROM python:2.7
-MAINTAINER wilbur "wilbur@kuailexue.com"
+MAINTAINER wilbur "powerx1202@gmail.com"
 
 RUN echo Asia/Shanghai > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
 
