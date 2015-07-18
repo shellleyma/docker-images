@@ -1,6 +1,6 @@
 FROM wilburding/shire_base
 
-ENV CRFPP_VERSION 0.58
+ENV CRFPP_VERSION 0.59
 WORKDIR /usr/src
 RUN git clone https://github.com/taku910/crfpp.git \
         && cd crfpp \
@@ -27,7 +27,7 @@ RUN git clone https://github.com/lzhang10/maxent.git \
 
 WORKDIR /usr/src
 RUN apt-get update && apt-get install -y \
-        libreoffice-headless \
+        libreoffice-common \
         imagemagick
 RUN apt-get autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
