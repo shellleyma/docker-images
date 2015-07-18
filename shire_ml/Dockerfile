@@ -4,6 +4,7 @@ ENV CRFPP_VERSION 0.58
 WORKDIR /usr/src
 RUN git clone https://github.com/taku910/crfpp.git \
         && cd crfpp \
+        && sed -i '/winmain/d' crf_learn.cpp crf_test.cpp \
         && ./configure --prefix=/usr/local \
         && make \
         && make install \
@@ -25,8 +26,10 @@ RUN git clone https://github.com/lzhang10/maxent.git \
 
 
 WORKDIR /usr/src
-RUN apt-get update && apt-get install -y libreoffice-headless
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get update && apt-get install -y \
+        libreoffice-headless \
+        imagemagick
+RUN apt-get autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
 WORKDIR /usr/src/app
