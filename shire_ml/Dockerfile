@@ -28,6 +28,7 @@ RUN git clone https://github.com/lzhang10/maxent.git \
 WORKDIR /usr/src
 RUN apt-get update && apt-get install -y \
         libreoffice-common \
+        libreoffice-writer \
         imagemagick \
         openjdk-7-jre-headless
 # libreoffice needs java
