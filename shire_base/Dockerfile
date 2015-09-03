@@ -18,6 +18,9 @@ RUN apt-get remove -y gfortran \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache
 
+# fix uid and gid to be same as host www
+RUN groupadd -g 1000 www && useradd -g www -u 1000 www
+
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
