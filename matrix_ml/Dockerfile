@@ -1,4 +1,4 @@
-FROM wilburding/shire_base
+FROM registry.guangzixuexi.com/thematrix/matrix_base
 
 ENV CRFPP_VERSION 0.59
 WORKDIR /usr/src

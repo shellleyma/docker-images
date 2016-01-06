@@ -1,5 +1,5 @@
 # py_boost_mongo
-FROM wilburding/py_boost
+FROM registry.guangzixuexi.com/thematrix/py_boost
 
 ENV MONGO_CXX_DRIVER_VERSION 1.0.2
 
@@ -17,7 +17,3 @@ RUN pip uninstall -y SCons && rm -rf /tmp/* /var/tmp/* /root/.cache/*
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-
-VOLUME ['/usr/src/app', '/var/log']
-
-CMD ['python']
